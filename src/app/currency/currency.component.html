@@ -1,0 +1,26 @@
+<table class="table text-center">
+    <thead style="background-color:rgba(128, 128, 128, 0.30)">
+        <th>
+            code
+        </th>
+        <th>
+            symbol
+        </th>
+        <th>
+            Name
+        </th>
+    </thead>
+    <tr *ngFor="let currency of currencies ,let odd=odd " class="py-5 rounded " [style]="odd?'background-color:rgba(128, 128, 128, 0.30);':''">
+        <td>{{currency.code}}</td>
+        <td>{{currency.symbol}}</td>
+        <td>{{currency.name}}</td>
+
+      
+    </tr>
+
+
+</table>
+
+
+
+        
