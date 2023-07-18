@@ -12,6 +12,7 @@ import { CurrencyComponent } from './currency/currency.component';
 import { ContactComponent } from './contact/contact.component';
 import { ConvertComponent } from './convert/convert.component';
 import { ConvertByDateComponent } from './convert-by-date/convert-by-date.component';
+import { PrimeModule } from './module/prime/prime.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { ConvertByDateComponent } from './convert-by-date/convert-by-date.compon
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    PrimeModule
     
   ],
   providers: [],

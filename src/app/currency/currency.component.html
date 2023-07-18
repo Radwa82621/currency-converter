@@ -1,25 +1,32 @@
-<table class="table text-center">
-    <thead style="background-color:rgba(128, 128, 128, 0.30)">
-        <th>
-            code
-        </th>
-        <th>
-            symbol
-        </th>
-        <th>
-            Name
-        </th>
-    </thead>
-    <tr *ngFor="let currency of currencies ,let odd=odd " class="py-5 rounded " [style]="odd?'background-color:rgba(128, 128, 128, 0.30);':''">
-        <td>{{currency.code}}</td>
-        <td>{{currency.symbol}}</td>
-        <td>{{currency.name}}</td>
-
-      
-    </tr>
 
 
-</table>
+
+<div class="card">
+    <p-table
+        [value]="currencies"
+        [paginator]="true"
+        [rows]="5"
+        [showCurrentPageReport]="true"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    >
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:33.3%">code</th>
+                <th style="width:33.3%">symbol</th>
+                <th style="width:33.3%">name</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-currencies>
+            <tr>
+                <td>{{ currencies.code }}</td>
+                <td>{{ currencies.symbol }}</td>
+                <td>{{ currencies.name }}</td>
+            </tr>
+        </ng-template>
+     
+    </p-table>
+</div>
 
 
 

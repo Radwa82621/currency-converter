@@ -25,7 +25,10 @@ export class CurrencyService  {
   {
     return this._hhtp.get(`https://api.freecurrencyapi.com/v1/latest`,{headers:this.headers})
   }
+  convertByDate(date:any):Observable<any>{
+    return this._hhtp.get(`https://api.freecurrencyapi.com/v1/historical?date_from=${date}`,{headers:this.headers})
 
+  }
 
 
 }
